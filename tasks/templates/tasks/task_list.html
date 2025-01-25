@@ -11,5 +11,6 @@
             <li>{{ task.title }} - {{ task.completed|yesno:"Completed,Not Completed" }}</li>
         {% endfor %}
     </ul>
+    <a href="{% url 'create_task' %}" class="btn btn-secondary mt-3">ایجاد وظایف</a>
 </body>
 </html>
