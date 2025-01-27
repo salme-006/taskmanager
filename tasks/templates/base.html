@@ -8,21 +8,23 @@
         <title>{% block title %}My Website{% endblock %}</title>
         <link href="{% static 'css/styles.css' %}" rel="stylesheet">
         <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- CSS for Bootstrap -->
+        <link href="/node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     </head>
     <body>
         <!-- Navigation -->
         <nav class="navbar navbar-expand-lg navbar-light" id="mainNav">
             <div class="container px-4 px-lg-5">
-                <a class="navbar-brand" href="{% url 'index' %}">My Website</a>
+                <a class="navbar-brand" href="{% url 'task_list' %}">My Website</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive">
                     Menu
                     <i class="fas fa-bars"></i>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto">
-                        <li class="nav-item"><a class="nav-link" href="{% url 'index' %}">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="{% url 'about' %}">About</a></li>
-                        <li class="nav-item"><a class="nav-link" href="{% url 'contact' %}">Contact</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'task_list' %}">Task List</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'create_task' %}">Create Task</a></li>
+
                     </ul>
                 </div>
             </div>
@@ -39,6 +41,8 @@
             </div>
         </footer>
         <script src="{% static 'js/scripts.js' %}"></script>
+        <!-- JS for Bootstrap -->
+        <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     </body>
 </html>
 

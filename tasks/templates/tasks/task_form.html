@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Create/Update Task
+{% endblock %}
+
+{% block content %}
+    <h2 class="text-center mb-4">ایجاد/ویرایش وظیفه</h2>
+    <form method="post" class="p-4 border rounded bg-light">
+        {% csrf_token %}
+        {{ form.as_p }}  <!-- فرم تسک -->
+        <button type="submit" class="btn btn-primary">ذخیره</button>
+    </form>
+    <a href="{% url 'task_list' %}" class="btn btn-secondary mt-3">بازگشت به لیست وظایف</a>
+{% endblock %}
